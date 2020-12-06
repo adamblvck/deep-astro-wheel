@@ -2,9 +2,16 @@
 
 We're trying to build a dataset with planetary positions as measured from Earth's positions.
 
-Havinig this done, we want to look at some patterns. Could be anything, if it's worthy or special to notice or recognize.
+Having done this, we want to look at some patterns. Could be anything, if it's worthy or special to notice or recognize.
 
+Then we took following steps:
 
+1. Build data set
+  - Input (X) & Training (y): Julian Time + 4000 years of planetary positions
+  - Validation (X -> Y) : Julian Time + 2000 years of unseen planetary positions
+2. Train deep neural network on data
+3. Validate against 2000 years of unseen planet positions
+4. report
 
 https://towardsdatascience.com/how-not-to-use-machine-learning-for-time-series-forecasting-avoiding-the-pitfalls-19f9d7adf424
 
