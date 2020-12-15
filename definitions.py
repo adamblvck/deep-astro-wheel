@@ -1,3 +1,21 @@
+# important parameters
+import math
+
+design_offset = 88 * math.pi / 180 # required to determine design parameters
+earth_offset = math.pi # earth offset (180* against the sun)
+pi2 = math.pi*2 # circle constant
+
+# Important parameters and statistics for mandala wheel calculation
+hex_width = pi2/64
+line_width = hex_width/6
+color_width = line_width/6
+tone_width = color_width/6
+base_width = tone_width/5
+
+# Credits to Ra Uru Hu for receiving this info
+iching_map = [36, 22, 63, 37, 55, 30, 49, 13, 19, 41, 60, 61, 54, 38, 58, 10, 11, 26, 5, 9, 34, 14, 43, 1, 44, 28, 50, 32, 57, 48, 18, 46, 6, 47, 64, 40, 59, 29, 4, 7, 33, 31, 56, 62, 53, 39, 52, 15, 12, 45, 35, 16, 20, 8, 23, 2, 24, 27, 3, 42, 51, 21, 17, 25]
+iching_map.reverse() 
+
 iching = [
     {"hex":1,"hex_font":"䷀","trad_chinese":"乾","pinyin":"qián","english":"Initiating","binary":111111,"od":"02"},
     {"hex":2,"hex_font":"䷁","trad_chinese":"坤","pinyin":"kūn","english":"Responding","binary":"000000","od":"01"},
@@ -70,4 +88,11 @@ from_binary_to_element_symbols = {
 	'01': '🜂',
 	'10': '🜄',
 	'00': '🜃',
+}
+
+from_binary_to_element_ix = {
+    '11': '-1',
+    '01': '0',
+    '10': '1',
+    '00': '2',
 }
